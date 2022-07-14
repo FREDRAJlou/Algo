@@ -1,6 +1,7 @@
 package brackets;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class Paranthesis {
@@ -63,10 +64,11 @@ public class Paranthesis {
     // driver program
     public static void main (String[] args)
     {
-        int n = 3;
+        int n = 9;
       /*  char[] str = new char[2 * n];
         printParenthesis(str, n);*/
        List<String> l =  generateParenthesis(n);
        System.out.println(String.join(", ",l));
+      l.sort(Comparator.naturalOrder());
     }
 }
